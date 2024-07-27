@@ -15,7 +15,6 @@ class MathKeyBoard extends StatelessWidget {
           width: double.infinity,
           child: MainNumbersAndOperationsButtonsGridView(),
         ),
-        addHieghtSpace(8),
         const BottomButtonsRow()
       ],
     );

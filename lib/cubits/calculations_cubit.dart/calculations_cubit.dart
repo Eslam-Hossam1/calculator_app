@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:expressions/expressions.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:my_app/cubits/calculations_cubit.dart/calculations_cubit_states.dart';
@@ -36,14 +38,21 @@ class CalculationsCubit extends Cubit<CalculationsStates> {
 
   void deleteNumber() {
     //check if input text not empty
+
     if (inputText.isNotEmpty) {
       inputText = inputText.substring(0, inputText.length - 1);
     }
+    log(inputText[inputText.length - 1]);
     try {
       //if input text is empty go back to initial state
       if (inputText.isEmpty) {
         outputText = '0';
         emit(InitialState());
+      } else if (inputText[inputText.length - 1] == '.') {
+        outputText =
+            _evaluateEquation(inputText.substring(0, inputText.length - 1))
+                .toString();
+        emit(SuccessState());
       }
       //if last char is math operation calc equation as its not exist and emit success state
       else if (_isLastCharMathOperation(inputText)) {
