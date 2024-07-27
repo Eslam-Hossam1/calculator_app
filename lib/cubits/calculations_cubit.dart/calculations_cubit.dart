@@ -42,12 +42,12 @@ class CalculationsCubit extends Cubit<CalculationsStates> {
     if (inputText.isNotEmpty) {
       inputText = inputText.substring(0, inputText.length - 1);
     }
-    log(inputText[inputText.length - 1]);
     try {
       //if input text is empty go back to initial state
       if (inputText.isEmpty) {
         outputText = '0';
         emit(InitialState());
+        //if last num is point ignore it
       } else if (inputText[inputText.length - 1] == '.') {
         outputText =
             _evaluateEquation(inputText.substring(0, inputText.length - 1))
