@@ -1,16 +1,21 @@
-# my_app
+# 📱 Calculator App  
 
-A new Flutter project.
+A simple yet powerful **calculator application built with Flutter**.  
+It supports **basic arithmetic operations** including addition, subtraction, multiplication, and division.  
+The app offers both **light and dark themes** for better user comfort and leverages **Cubit state management** for clean logic separation.  
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## ✨ Features  
 
-A few resources to get you started if this is your first Flutter project:
+### ➗ Basic Arithmetic  
+- Addition, subtraction, multiplication, and division  
+- Handles edge cases like **division by zero**  
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 🌙 Dark & Light Mode  
+- Toggle between light and dark themes  
+- Managed with `ThemeData` and Cubit  
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### ⚡ State Management  
+- Uses **Cubit** for clean separation of UI and business logic  
+- Ensures a smooth user experience  
